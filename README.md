@@ -54,7 +54,6 @@ Things you may want to cover:
 | item_status          | string     | null: false                   |
 | item_price           | integer    | null: false                   |
 | item_price_fee       | integer    | null: false                   |
-| item_price_gain      | integer    | null: false                   |
 | item_delivery_chager | string     | null: false                   |
 | item_delivery_area   | string     | null: false                   |
 | user                 | references | null: false, forgen_key: true |
@@ -62,9 +61,9 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :users
+- belongs_to :user
 - has_many :comments
-- belongs_to :purchases
+- belongs_to :purchase
 
 ## comments テーブル
 
@@ -81,14 +80,11 @@ Things you may want to cover:
 
 ## purchases テーブル
 
-| Column                | Type       | Options                       |
+| Column     | Type       | Options                       |
 | --------------------- | ---------- | ----------------------------- |
-| cledit_no             | integer    | null: false                   |
-| credit_varidity_manth | references | null: false                   |
-| credit_varidity_year  | references | null: false                   |
-| user                  | integer    | null: false, forgen_key: true |
-| item                  | integer    | null: false, forgen_key: true |
-
+| user_id                  | integer    | null: false, forgen_key: true |
+| item-id           | integer    | null: false, forgen_key: true |
+<!-- referenseで作るかどうかを検討 -->
 ### Association
 
 - belongs_to :item
