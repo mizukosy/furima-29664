@@ -41,7 +41,7 @@ Things you may want to cover:
 
 - has_many :items
 - has_many :coments
-- has_one  :purchases
+- has_one  :purchase
 
 ## items テーブル
 
@@ -90,18 +90,18 @@ Things you may want to cover:
 
 - belongs_to :item
 - belongs_to :user
-- has_one :ship_addreses
+- has_one :ship_address
 
 ## ship_addresses テーブル
 
 | Column     | Type       | Options                      |
 | ---------- | ---------- | ---------------------------- |
-| post_code  | integer    | null: false                  |
-| prefecture | string     | null: false                  |
+| post_code  | string     | null: false                  |
+| prefecture | integer    | null: false                  |
 | city       | string     | null: false                  |
 | block      | string     | null: false                  |
 | building   | string     |                              |
-| telephone  | integer    | null: false                  |
+| telephone  | string     | null: false                  |
 | purchase   | references | null: false forgen:key: true |
 
 
