@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-
+  
   def index
+
 
   end
 
@@ -8,8 +9,8 @@ class UsersController < ApplicationController
 
   end
 
-  def create
-    
-  end
+  private
+  def user_params
+    params.require(:user).permit(:nickname, :///////)
 
 end
