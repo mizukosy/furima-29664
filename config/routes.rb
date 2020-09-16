@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :index, :users, only: [:new, :create]
+  resources :users, only: [:index, :new, :create]
 end
